@@ -100,21 +100,23 @@ export default function Hero() {
         </motion.p>
 
         <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
-          <Button size="lg" className="group relative overflow-hidden">
+          {/* <Button size="lg" className="group relative overflow-hidden">
             <span className="relative z-10 flex items-center">
               View Portfolio
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </span>
             <span className="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </Button>
+          </Button> */}
 
-          <Button size="lg" variant="outline" className="group relative overflow-hidden">
-            <span className="relative z-10 flex items-center">
-              Download Resume
-              <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-            </span>
-            <span className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </Button>
+<Button size="lg" variant="outline" className="group relative overflow-hidden" asChild>
+    <a href="https://drive.google.com/file/d/1jZxny3yusEMub5P0U3zgHnzN1mq0v0Io/view" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+      <span className="relative z-10 flex items-center">
+        Download Resume
+        <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+      </span>
+      <span className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+    </a>
+  </Button>
         </motion.div>
 
         <motion.div
